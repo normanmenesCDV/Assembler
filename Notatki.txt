@@ -1,0 +1,7 @@
+NIEKTÓRE REJESTRY MAJĄ WAŻNE ZNACZENIE. Np. EAX i EDX!
+przy operacji mul, wynik zapisuje się do dwóch rejestrów (EAX oraz EDX). W EDX jest bardziej znacząca część, a w EAX mniej znacząca. Jeśli działamy na małych liczbach, możemy pominąć rejestr EDX, bo będzie on binarnie reprezentował 00000000 00000000 00000000 00000000
+
+zerowanie rejestru, np. %EBX
+mov $0, %EBX	# najgorsze rozwiązanie
+sub %EBX, %EBX	# lepsze rozwiązanie
+xor %EBX, %EBX	# najlepsze rozwiązanie
